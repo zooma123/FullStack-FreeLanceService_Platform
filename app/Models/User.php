@@ -56,5 +56,9 @@ return $this->hasOne(Profile::class);
 
 }
 
+public function Proto(){
 
+return $this->hasOne(Protofolio::class);
+
+}
 }
