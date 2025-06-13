@@ -18,7 +18,7 @@ $validated['password'] = Hash::make($request->password);
 
 User::create($validated);
 
-response()->json([
+ return response()->json([
 'message' => "تم انشاء الحساب بنجاح "
 
 ]);
