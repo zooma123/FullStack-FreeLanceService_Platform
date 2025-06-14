@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,7 +23,7 @@ Route::post('/logout' , [AuthController::class , 'Logout'])->withoutMiddleware([
 
 Route::prefix('/Profile')->group(function(){
 
-    Route::post('/Create' , [AuthController::class , 'CreateProfile'])->withoutMiddleware([Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class]);;
+    Route::post('/Create' , [ProfileController::class , 'CreateProfile'])->withoutMiddleware([Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class]);;
 
     });
     

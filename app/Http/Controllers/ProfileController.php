@@ -11,12 +11,20 @@ class ProfileController extends Controller
     
 public function CreateProfile(Request $request){
 
+
+
 $user_id = Auth::user()->id;
+//handel ProfilePhoto
+
+if($request->hasFile('profile_photo')){
+    $path =$request->file('profile_photo')->store('ProfilesPhoto' , 'public');
+      }
 $Profile = Profile::create([
 'user_id' => $user_id ,
 "title" => $request->title ,
 "phone_number" => $request->phone_number,
-"profile_photo" => $request->profile_photo
+ "experience" => $request->experience,
+"profile_photo" => $path
 
 ]);
 
