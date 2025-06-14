@@ -18,3 +18,15 @@ Route::post('/logout' , [AuthController::class , 'Logout'])->withoutMiddleware([
 });
 
 
+
+
+Route::prefix('/Profile')->group(function(){
+
+    Route::post('/Create' , [AuthController::class , 'CreateProfile'])->withoutMiddleware([Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class]);;
+
+    });
+    
+
+
+
+

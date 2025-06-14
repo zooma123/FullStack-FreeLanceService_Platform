@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('title');
-            $table->string('phone-number')->unique();
+            $table->string('phone_number')->unique();
             $table->string('experience');
-            $table->string('profile-photo');
+            $table->string('profile_photo');
  
             $table->timestamps();
         });
