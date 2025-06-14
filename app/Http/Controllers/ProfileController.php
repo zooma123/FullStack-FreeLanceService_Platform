@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Profile;
+use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -33,6 +34,19 @@ return response()->json([
 
 ]);
 
+}
+
+
+public function MyProfile(){
+
+$user = Auth::user();
+$profile = $user->Profile;
+
+return response()->json([
+
+$profile
+
+]);
 
 }
 

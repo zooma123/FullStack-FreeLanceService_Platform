@@ -23,7 +23,10 @@ Route::post('/logout' , [AuthController::class , 'Logout'])->withoutMiddleware([
 
 Route::prefix('/Profile')->group(function(){
 
-    Route::post('/Create' , [ProfileController::class , 'CreateProfile'])->withoutMiddleware([Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class]);;
+    Route::post('/Create' , [ProfileController::class , 'CreateProfile'])->withoutMiddleware([Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class])->middleware('auth:sanctum');
+    Route::get('/MyProfile', [ProfileController::class , 'MyProfile'])->withoutMiddleware([Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class])->middleware('auth:sanctum');
+
+
 
     });
     
