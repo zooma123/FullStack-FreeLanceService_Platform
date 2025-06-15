@@ -1,0 +1,29 @@
+nav{
+    background-color: rgba(55, 52, 48, 0.2);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 40px;
+    font-size: 20px;
+}
+nav, ul {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+
+a{
+   text-decoration: none;
+   color: #fff;
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+  gap: 40px;
+}
+li{
+    cursor: pointer;
+}
+li:hover, a:hover{
+    color: gold;
+}

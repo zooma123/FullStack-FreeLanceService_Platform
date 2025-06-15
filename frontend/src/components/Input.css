@@ -1,0 +1,15 @@
+input{
+    padding: 20px 25px ;
+    width: 250px; 
+    outline:none; 
+    border-radius: 5px;
+    background-color: #fff;
+    border: 2px solid rgba(100, 100, 100, 0.299);
+}
+input::placeholder{
+    font-size: 18px;
+}
+input:hover, input:focus{
+   border: 2px solid #ff0084;
+}
+ 
