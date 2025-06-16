@@ -1,4 +1,4 @@
-button{
+.custom-button{
     padding: 10px 15px;
     border-radius: 5px;
     border: none;
@@ -7,7 +7,7 @@ button{
     transition: 0.5s
     
 }
-button:hover{
+.custom-button:hover{
     background-color: #e60278;
     cursor: pointer;
 }
