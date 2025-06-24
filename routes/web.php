@@ -3,7 +3,13 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PushNotfication;
+use Illuminate\Support\Facades\Broadcast;
 use Illuminate\Support\Facades\Route;
+
+
+Route::options('{any}', function () {
+    return response()->json([], 204);
+})->where('any', '.*');
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,11 +38,5 @@ Route::prefix('/Profile')->group(function(){
     });
 
     
-    
-    Route::post('/SendNotification' , [PushNotfication::class , 'sendDiscount'])->withoutMiddleware([Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class])->middleware('auth:sanctum');
-    
-    Route::get('/ShowNotifications' , [PushNotfication::class , 'shownotifications'])->withoutMiddleware([Illuminate\Foundation\Http\Middleware\VerifyCsrfToken::class])->middleware('auth:sanctum');
-    
-
 
 
