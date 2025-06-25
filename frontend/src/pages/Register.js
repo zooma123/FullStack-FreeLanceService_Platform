@@ -2,21 +2,26 @@ import Input from "../components/Input";
 import Btn from "../components/Btn";
 import "./reg_log_style.css";
 import { Link } from 'react-router-dom';
+import logo from "../assets/logo.png"
 
 
 export default function Register(){
     return(
          <div style={{display:"flex"}}>
                     <div className="reg-log-img"></div>
-                    <div className="reg-log-container" style={{ paddingTop:"100px" }}>
-                        <h1>logo</h1>
-                        <h1>Sign Up</h1>
+                    <div className="reg-log-container">
+                        <div style={{textAlign:"center"}}>
+                            <img src={logo} alt="logo" className="logo"></img>
+                        </div>
+                         <div>
+                          <h1>Welcome</h1>
+                        </div>
                         <div className="reg-log-card">
                             <div style={{display: "flex", justifyContent:"space-between"}}>
                                 <Input placeholder="First name" style={{width:"45%"}}/>
                                 <Input placeholder="Last name" style={{width:"45%"}}/>
                             </div>
-                            <Input type="text" placeholder="Email " style={{width:"100%"}}/>
+                            <Input type="text" placeholder="Email " style={{width:"100%"}} required/>
                             <Input type="password" placeholder="Password" style={{width:"100%"}}/>
                         
                             
